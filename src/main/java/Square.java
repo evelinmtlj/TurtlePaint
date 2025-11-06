@@ -1,9 +1,10 @@
+import java.awt.*;
+
 public class Square extends Shape {
     private double sideLength;
 
-
-    public Square(double x, double y, double sideLength) {
-        super(x, y);
+    public Square(Turtle turtle, Point point, double sideLength) {
+        super(turtle, point);
         this.sideLength = sideLength;
     }
 
@@ -13,5 +14,13 @@ public class Square extends Shape {
 
     public void setSideLength(double sideLength) {
         this.sideLength = sideLength;
+    }
+    @Override
+    public void paint(){
+        turtle.goTo(point.x,point.y);
+        for(int i = 0;i < 4; i++) {
+            turtle.forward(sideLength);
+            turtle.turnRight(90);
+        }
     }
 }

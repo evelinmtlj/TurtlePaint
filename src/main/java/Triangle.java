@@ -1,26 +1,27 @@
+import java.awt.*;
+
 public class Triangle extends Shape{
-    private double height;
-    private double base;
+    private double side;
 
-    public Triangle(double x, double y, double height, double base) {
-        super(x, y);
-        this.height = height;
-        this.base = base;
+    public Triangle(Turtle turtle, Point point, double side) {
+        super(turtle, point);
+        this.side = side;
     }
 
-    public double getHeight() {
-        return height;
+    public double getSide() {
+        return side;
     }
 
-    public void setHeight(double height) {
-        this.height = height;
+    public void setSide(double side) {
+        this.side = side;
     }
 
-    public double getBase() {
-        return base;
-    }
-
-    public void setBase(double base) {
-        this.base = base;
+    @Override
+    public void paint(){
+        turtle.goTo(point.x,point.y);
+        for(int i = 0; i<3;i++){
+            turtle.forward(side);
+            turtle.turnRight(120);
+        }
     }
 }

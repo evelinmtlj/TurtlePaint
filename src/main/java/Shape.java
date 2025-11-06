@@ -1,25 +1,28 @@
+import java.awt.*;
+
 public abstract class Shape  {
-  protected double x;
-  protected double y;
+  protected Turtle turtle;
+  protected Point point; //x and y
 
-    public Shape(double x, double y) {
-        this.x = x;
-        this.y = y;
+    public Shape(Turtle turtle, Point point) {
+        this.turtle = turtle;
+        this.point = point;
     }
 
-    public double getX() {
-        return x;
+    public Turtle getTurtle() {
+        return turtle;
     }
 
-    public void setX(double x) {
-        this.x = x;
+    public void setTurtle(Turtle turtle) {
+        this.turtle = turtle;
     }
 
-    public double getY() {
-        return y;
+    public Point getPoint() {
+        return point;
     }
 
-    public void setY(double y) {
-        this.y = y;
+    public void setPoint(Point point) {
+        this.point = point;
     }
+    public abstract void paint();
 }
