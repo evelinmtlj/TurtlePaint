@@ -4,6 +4,9 @@ public class MainApp
 {
     public static void main(String[] args)
     {
+      menu menu = new menu();
+
+        menu.display();
 
 
         // This starter code to get you familiar with how

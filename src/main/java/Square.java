@@ -1,6 +1,8 @@
 import java.awt.*;
 
 public class Square extends Shape {
+    private int x;
+    private int y;
     private double sideLength;
 
     public Square(Turtle turtle, Point point, double sideLength) {
